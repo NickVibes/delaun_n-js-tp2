@@ -11,9 +11,10 @@ const boardStyle = {
 
 const Board = ({ cells = [], onClickCell = () => {} }) => (
   <div style={boardStyle}>{
-      cells.map((c, index) => <Cell onClick={() => onClickCell(index)
-    }/>)}
-  </div>
+      cells.map((c, index) => <Cell onClick={() => onClickCell(index)}
+                                    symbol={c}
+      />)
+    }</div>
 );
 
 export default Board;

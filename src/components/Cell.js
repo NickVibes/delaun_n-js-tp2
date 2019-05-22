@@ -25,8 +25,8 @@ class Cell extends React.Component {
     return (
       <div  style={{...cellStyle, backgroundColor: this.state.mouseOver ? "blue" : "white"}} 
             onMouseOver={() => this.setState({ mouseOver: true })}
-            onMouseOut={() => this.setState({ mouseOver: false }) }>
-              ?
+            onMouseOut={() => this.setState({ mouseOver: false })} >
+            { this.props.symbol }
       </div>
     );
   }
