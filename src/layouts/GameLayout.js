@@ -34,8 +34,8 @@ class GameLayout extends React.Component {
         style={gameLayoutStyle}
         onClick={() => this.setState({ currentPlayer: "toto" })}
       >
-        <GameInfo />
-        <Board />
+        <GameInfo currentPlayer={this.state.currentPlayer} />
+        <Board cells={this.state.cells}/>
       </div>
     );
   }
