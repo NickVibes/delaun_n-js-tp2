@@ -12,6 +12,24 @@ const cellStyle = {
   cursor: "pointer"
 };
 
-const Cell = () => <div style={cellStyle}>?</div>;
+class Cell extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      mouseOver: false
+    }
+  }
+
+  render () {
+    return (
+      <div  style={{...cellStyle, backgroundColor: this.state.mouseOver ? "blue" : "white"}} 
+            onMouseOver={() => this.setState({ mouseOver: true })}
+            onMouseOut={() => this.setState({ mouseOver: false }) }>
+              ?
+      </div>
+    );
+  }
+}
 
 export default Cell;
